@@ -7,4 +7,4 @@ before_install:
   - docker build -f Dockerfile.dev -t r4ncid/docker-react .
 
 script:
-  - docker run r4ncid/docker-react yarn test -- --coverage
+  - docker run -e CI=true r4ncid/docker-react yarn test -- --coverage
